@@ -66,20 +66,20 @@
             <mat-checkbox class="ml-3" name="skill" ngModel required #skill="ngModel">Jave</mat-checkbox>
             <mat-checkbox class="ml-3" name="skill" ngModel required #skill="ngModel">Java Advance</mat-checkbox>
 
-            <strong class="text-danger" *ngIf="skill.touched && skill.hasError('required')">
+            <div class="text-danger" *ngIf="skill.touched && skill.hasError('required')">
                 Atleast one skill is required 
-            </strong>
+            </div>
         </div>
 
         <div class="form-group">
             <label for="resume">Resume URL</label>
-            <input type="url" name="resume" title="resume" ngModel required #skill="ngModel" class="form-control"  pattern="https?://.+">
+            <input type="url" name="resume" title="resume" ngModel required #resume="ngModel" class="form-control"  pattern="https?://.+">
 
-            <strong class="text-danger" *ngIf="skill.touched && skill.hasError('required')">
+            <strong class="text-danger" *ngIf="resume.touched && resume.hasError('required')">
                 resume url is required 
             </strong>
 
-            <strong class="text-danger" *ngIf="skill.hasError('pattern')">
+            <strong class="text-danger" *ngIf="resume.hasError('pattern')">
                 invalid resume url
             </strong>
         </div>
